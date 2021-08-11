@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="escriba_texto">Favor escriba un texto</string>
+    <string name="enviar">Enviar</string>
+    <string name="xxxxxxx">xxxxxxxxx</string>
+    <string name="requerido">El campo es requerido</string>
+</resources>

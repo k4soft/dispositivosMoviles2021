@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/dispositivosMoviles2021/widgets/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/dispositivosMoviles2021/sistemasolar/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/dispositivosMoviles2021/sistemasolar/app/src/main/res/layout/planeta_item.xml" value="0.264" />
       </map>
     </option>
   </component>

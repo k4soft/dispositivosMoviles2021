@@ -2,4 +2,5 @@
     <string name="app_name">Widget</string>
     <string name="widgets">Widgets</string>
     <string name="valores">Progreso %1$s</string>
+    <string name="digite_ciudad">Digite una ciudad</string>
 </resources>

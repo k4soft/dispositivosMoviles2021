@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -20,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listViewPlanetas;
 
+    EditText txtBusqueda;
+    PlanetaBaseAdapter planetaBaseAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,15 +33,32 @@ public class MainActivity extends AppCompatActivity {
         initComponents();
         cargarPlanetas();
         cargarAdapter();
+        txtBusqueda.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+                planetaBaseAdapter.getFilter().filter(charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     private void cargarAdapter() {
-        PlanetaBaseAdapter planetaBaseAdapter = new PlanetaBaseAdapter(this,listaPlanetas);
-        listViewPlanetas.setAdapter(planetaBaseAdapter);
+         planetaBaseAdapter = new PlanetaBaseAdapter(this,listaPlanetas);
+         listViewPlanetas.setAdapter(planetaBaseAdapter);
     }
 
     private void initComponents() {
         listViewPlanetas = findViewById(R.id.listViewPlanetas);
+        txtBusqueda = findViewById(R.id.txtBusqueda);
     }
 
     private void cargarPlanetas() {

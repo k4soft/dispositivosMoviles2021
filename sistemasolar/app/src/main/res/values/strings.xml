@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">sistema solar</string>
+    <string name="buscar_planeta">Buscar Planeta</string>
 </resources>

@@ -1,24 +1,39 @@
 package co.com.k4soft.login;
 
+import co.com.k4soft.login.dominio.Credenciales;
+
 public interface LoginMVP {
 
-     interface View{
+    interface View {
 
-          String getUsuario();
 
-          void requerirUsuario();
-     }
+        void requerirUsuario();
 
-     interface Presenter{
-         void validarInformacion();
+        void requerirPassword();
 
-          void requerirUsuario();
-     }
+        void rechazarCredenciales();
 
-     interface Model{
+        void aceptarCredenciales();
 
-          void setUsuario(String usuario);
+        Credenciales getCredenciales();
+    }
 
-          void validarInformacion();
-     }
+    interface Presenter {
+        void validarInformacion();
+
+        void requerirUsuario();
+
+        void requerirPassword();
+
+        void aceptarCredenciales();
+
+        void rechazarCredenciales();
+    }
+
+    interface Model {
+
+        void validarInformacion();
+
+        void setCredenciales(Credenciales credenciales);
+    }
 }

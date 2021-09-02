@@ -5,10 +5,13 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import co.com.k4soft.miagenda.persistencia.Tabla;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@Entity(tableName = "persona")
+@Entity(tableName = Tabla.PERSONA)
+@NoArgsConstructor
 public class Persona {
 
     @PrimaryKey(autoGenerate = true)

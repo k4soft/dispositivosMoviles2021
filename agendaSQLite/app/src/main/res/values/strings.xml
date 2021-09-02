@@ -11,4 +11,9 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_personas">Personas</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="informacion_exitosa">La información se ha almacendado exitosamente</string>
+    <string name="digite_documento">Digite documento</string>
+    <string name="digite_nombre">Digite los nombre</string>
+    <string name="ya_existe">La persona que está intentando registrar ya existe</string>
 </resources>

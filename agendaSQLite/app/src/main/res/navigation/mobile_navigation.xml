@@ -15,7 +15,7 @@
         android:id="@+id/nav_persona"
         android:name="co.com.k4soft.miagenda.ui.personas.PersonaFragment"
         android:label="@string/menu_personas"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_persona" />
 
     <fragment
         android:id="@+id/nav_slideshow"

@@ -1,5 +1,6 @@
 package co.com.k4soft.miagenda.persistencia.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -15,8 +16,7 @@ public interface PersonaDAO {
     void create(Persona persona);
 
     @Query("SELECT * FROM persona")
-    List<Persona> findAll();
-
+    LiveData<List<Persona>> findAll();
     @Query("SELECT * FROM persona where documento =:documento")
     Persona findByDocumento(String documento);
 }

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Web service client</string>
+    <string name="listado_estudiantes">Listado de estudiantes</string>
+</resources>

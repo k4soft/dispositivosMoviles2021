@@ -8,6 +8,7 @@ import com.google.gson.Gson;
 
 import java.lang.reflect.Type;
 
+import co.com.k4soft.clienteapijava.LoginStrategy;
 import co.com.k4soft.clienteapijava.R;
 import co.com.k4soft.clienteapijava.cliente.Service;
 import co.com.k4soft.clienteapijava.cliente.util.RetrofitFactory;
@@ -48,16 +49,19 @@ public class LoginService  extends RetrofitFactory implements Service{
                     try {
                         LoginResponse loginResponse = gson.fromJson(responseBody.string(), (Type) LoginResponse.class);
                         getGlobalState().setAccessToken(loginResponse.getAccess_token());
+                        ((LoginStrategy) context).success();
                     }catch (Exception e){
-                        e.printStackTrace();
+                        ((LoginStrategy) context).failture(e.getMessage());
                     }
+                }else {
+                    ((LoginStrategy) context).badCredencials();
                 }
 
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(context, context.getString(R.string.bad_credencials), Toast.LENGTH_SHORT).show();
+                ((LoginStrategy) context).failture(t.getMessage());
             }
         });
 
